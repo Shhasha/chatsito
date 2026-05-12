@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatsito</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!-- Pantalla de Login -->
+  <div class="login-container" id="loginContainer">
+    <div class="login-box">
+      <h1>💬 Chatsito</h1>
+      <p>Inicia sesión con tu cuenta de Google para unirte al chat</p>
+      <div id="g_id_onload"
+        data-client_id="647587342402-qsalrqf73q5a7nea75pacl06269hd99i.apps.googleusercontent.com"
+        data-callback="handleGoogleLogin"
+        data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+        data-type="standard"
+        data-text="signin_with"
+        data-theme="outline"
+        data-size="large">
+      </div>
+      <div class="divider">
+        <span>o</span>
+      </div>
+      <button id="guestButton" class="guest-button">Ingresar como invitado</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de Chat -->
+  <div class="container" id="chatContainer" style="display: none;">
+    <header>
+      <h1>💬 Chatsito</h1>
+      <p class="username-display">Usuario: <span id="currentUsername">-</span></p>
+    </header>
+    
+    <div class="chat-container">
+      <div class="messages" id="messages">
+        <div class="system-message">Conectando al servidor...</div>
+      </div>
+      
+      <div class="input-area">
+        <input 
+          type="text" 
+          id="messageInput" 
+          placeholder="Escribe tu mensaje..." 
+          autocomplete="off"
+        >
+        <button id="sendButton">Enviar</button>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Chatsito CS </p>
+    </footer>
+  </div>
+  
+  <script src="client.js"></script>
+</body>
+</html>

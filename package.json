@@ -1,0 +1,16 @@
+{
+  "name": "chatsito",
+  "version": "1.0.0",
+  "description": "Sistema de Chat Colaborativo en tiempo real con WebSocket",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["websocket", "chat", "realtime"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.14.2",
+    "sqlite3": "^5.1.6"
+  }
+}
